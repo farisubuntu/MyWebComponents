@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section - 1</title>
+    <style>
+      header {
+        text-align: center;
+      }
+
+      hr {
+        background-color: burlywood;
+        height: 5px;
+      }
+      .section-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+      /*if section header content is too 
+   long then the title must wrapped to a new line*/
+      .section-header {
+        border: 1px solid orange;
+        /*The 400px value for the title is the custom 
+        breakpoint that will make the wrapping happen.*/
+        flex: 2 1 400px;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+        padding-right: 0.4em;
+        border: 1px solid brown;
+        flex: 1 1 300px;
+        /* text-align: left; => conflict by 'justify-content' */
+      }
+
+      /* center text inside box */
+      /* header>p */
+    </style>
+  </head>
+
+  <body>
+    <header class="page-header">
+      <h1>Section With flexbox</h1>
+    </header>
+    <hr />
+
+    <section>
+      <div class="section-wrapper">
+        <div class="section-header">
+          <header>
+            <p>Section Header Long Header Long Header</p>
+          </header>
+        </div>
+        <div class="section-title"><a href="#">See Details...</a></div>
+      </div>
+
+      <div class="section-wrapper">
+        <div class="section-header">
+          <header>
+            <p>Section Header Section Header Section Header</p>
+          </header>
+        </div>
+        <div class="section-title"><a href="#">See Details...</a></div>
+      </div>
+
+      <div class="section-wrapper">
+        <div class="section-header">
+          <header>
+            <p>Section Header Medium</p>
+          </header>
+        </div>
+        <div class="section-title"><a href="#">See Details...</a></div>
+      </div>
+
+      <div class="section-wrapper">
+        <div class="section-header">
+          <header>
+            <p>Section Header</p>
+          </header>
+        </div>
+        <div class="section-title"><a href="#">See Details...</a></div>
+      </div>
+    </section>
+  </body>
+</html>
